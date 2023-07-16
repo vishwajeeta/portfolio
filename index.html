@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      #menu {
+        margin-top: 10px;
+        padding: 10px;
+        border: #000 solid;
+        width: fit-content;
+        margin-left: 35%;
+        border-radius: 20px;
+      }
+      a {
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+        margin: 20px;
+        transition: transform 0.3s ease;
+      }
+      a:hover {
+        transform: scale(1.3);
+        color: blue;
+      }
+      .divide {
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+      #overview{
+        margin-left: 100px;
+        width: 70%;
+        text-align: left;
+      }
+      #links{
+        margin-left: 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: left;
+      }
+      #links > div{
+        padding-left: 5vw;
+        font-size: 1em;
+      }
+      img{
+        width: 90%;
+        border-radius: 30px;
+        transform: rotate(20deg);
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu">
+      <a href="#" style="color: blue;">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Resume</a>
+      <a href="#">Contact</a>
+    </div>
+    <br />
+    <div style="height: 100px"></div>
+    <div class="divide">
+      <div id="overview">
+        <h1>Full-stack web3.0 developer.</h1><br>
+        <h3 style="color: #3f3e3e;">I am a backend developer with experties in django and Node.js.  I have experience in building scalable,secure and reable web applications using various frameworks and technologies.</h3>
+    </div>
+      <img src="0_1.webp" alt="No image found" >
+    </div>
+    <br>
+    <div id="links">
+      
+      <a>twitter</a>
+      <a>insta</a>
+      <a>stack overflow</a>
+      <a>github</a>
+    </div>
+    <br><br><br>
+  </body>
+</html>
