@@ -25,6 +25,7 @@
         color: whitesmoke;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
+        border-bottom: solid 10px whitesmoke;
       }
       #head {
         display: grid;
@@ -43,27 +44,124 @@
         padding: 10px;
         padding-left: 400px;
         padding-right: 100px;
-        width: 150px;
+        width: 250px;
+      }
+      /*Next*/
+
+      /* Style tab links */
+      .tablink {
+        background-color: grey;
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 10%;
+        float: center;
+      }
+
+      .tablink:hover {
+        background-color: #777;
+      }
+
+      /* Style the tab content (and add height:100% for full page content) */
+      .tabcontent {
+        color: white;
+        display: none;
+        padding: 100px 20px;
       }
     </style>
   </head>
-  <body>
+  <body bgcolor="black">
     <div id="front">
       <a href="index.html">Home</a>
       <div id="head">
         <div>
           <h1 id="head1">My Projects</h1>
-          <h3 id="head2">
-            i am vishwa jeet ia ma kdjf lsdkjfl ldkfjoef jkdlfo eklkdjf ldskjf
-            ls;dk flkd felkf jsod dmnf sf sdkflkjeoej kndfm,nsdf,mdfn,sm nsd
-            nfksdskdjfklj
+          <h3 id="head2"><br/>
+            I am vishwajeet I am a Full-Stack and software developer <br />
+            and i develop websites using MEARN Stack .<br />
+            Know to build Rest-API for websites and interacting with Firebase.
+            <br />
           </h3>
         </div>
         <div>
-          <img src="0_1.webp" alt="" />
+          <img src="vishwa-removebg-preview.png" alt="" />
         </div>
       </div>
     </div>
-    <div id="container"></div>
+    <div style="padding: 10px"></div>
+    <div>
+      <div style="text-align: center">
+        <button
+          class="tablink"
+          onclick="openPage('chapter 1', this, 'lightgray')"
+          id="defaultOpen"
+        >
+          MERN-Stack
+        </button>
+        <button
+          class="tablink"
+          onclick="openPage('chapter 2', this, 'lightgray')"
+        >
+          Web3.0
+        </button>
+        <button
+          class="tablink"
+          onclick="openPage('chapter 3', this, 'lightgray')"
+        >
+          Django
+        </button>
+        <button
+          class="tablink"
+          onclick="openPage('chapter 4', this, 'lightgray')"
+        >
+          Flutter
+        </button>
+        <button
+          class="tablink"
+          onclick="openPage('chapter 5', this, 'lightgray')"
+        >
+          JAVA
+        </button>
+      </div>
+
+      <div id="chapter 1" class="tabcontent">
+        <h1>hello 1</h1>
+      </div>
+
+      <div id="chapter 2" class="tabcontent">
+        <h1>hello 2</h1>
+      </div>
+      <div id="chapter 3" class="tabcontent">
+        <h1>hello 3</h1>
+      </div>
+      <div id="chapter 4" class="tabcontent">
+        <h1>hello 4</h1>
+      </div>
+      <div id="chapter 5" class="tabcontent">
+        <h1>hello 5</h1>
+      </div>
+    </div>
+
+    <script>
+      function openPage(pageName, elmnt, color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
   </body>
 </html>
